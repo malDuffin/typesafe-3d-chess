@@ -1,0 +1,31 @@
+{
+  "name": "typesafe-3d-chess",
+  "version": "1.0.0",
+  "private": true,
+  "description": "3D chess powered by TypeSafe AI (Jev). AI vs AI by default, or take a side. Four difficulty levels.",
+  "type": "module",
+  "scripts": {
+    "dev": "concurrently -k -n client,server -c cyan,magenta \"vite\" \"tsx watch server/index.ts\"",
+    "dev:client": "vite",
+    "dev:server": "tsx watch server/index.ts",
+    "build": "tsc --noEmit && vite build",
+    "preview": "vite preview",
+    "start": "tsx server/index.ts"
+  },
+  "dependencies": {
+    "chess.js": "^1.4.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.21.2",
+    "three": "^0.169.0"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.17",
+    "@types/express": "^4.17.21",
+    "@types/three": "^0.169.0",
+    "concurrently": "^9.1.0",
+    "tsx": "^4.19.2",
+    "typescript": "^5.6.3",
+    "vite": "^5.4.11"
+  }
+}

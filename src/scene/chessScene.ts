@@ -1,0 +1,1 @@
+export { ChessScene } from "./index";
